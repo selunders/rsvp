@@ -50,7 +50,7 @@ const updateCountdown = () => {
   countdown.textContent = `${leading0(days)}:${leading0(hours)}:${leading0(minutes)}:${leading0(seconds)}`;
 };
 
-if (Date.now() > weddingDayTS) {
+if (Date.now() < weddingDayTS) {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 } else {
