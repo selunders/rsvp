@@ -1,4 +1,4 @@
-const weddingDayTS = Date.UTC(2026, 4, 23);
+const weddingDayTS = 1779519600000;
 
 const countdown = document.querySelector("#countdown");
 
