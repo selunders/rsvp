@@ -35,6 +35,10 @@ body {
   /* text-shadow: 2px 2px 4px #00000020; */
 }
 
+small {
+  font-family: monospace;
+}
+
 header {
   display: flex;
   flex-direction: column;
