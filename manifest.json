@@ -1,0 +1,27 @@
+{
+  "background_color": "#f8f8f8",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "sethandkaylin",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "sethandkaylin",
+  "start_url": "/",
+  "theme_color": "#222222",
+  "id": "sethandkaylin",
+  "description": "RSVP and Wedding Info for Seth &amp; Kaylin",
+  "screenshots": [
+    {
+      "src": "./photos/pwa_preview.png",
+      "sizes": "440x878",
+      "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "purpose": "maskable any",
+      "sizes": "any"
+    }
+  ]
+}
