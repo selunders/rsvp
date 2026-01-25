@@ -9,7 +9,8 @@
   /* --color-primary: #a94eff; */
   --color-primary: #333;
   --color-background: #efefef;
-  --z-map: 100;
+  --transition-short: 0.3s;
+  --transition-med: 0.5s;
   interpolate-size: allow-keywords;
   transition-behavior: allow-discrete;
 }
@@ -109,7 +110,7 @@ a:visited {
   color: oklch(from var(--color-primary) l c h / 0.5);
   font-weight: 500;
 
-  transition: all 0.2s;
+  transition: all var(--transition-short);
 
   &:hover {
     color: var(--color-primary);
@@ -128,7 +129,6 @@ a.btn:visited {
 
   border: 2px solid var(--color-primary);
   background-color: transparent;
-  transition: all 0.3s;
 
   &:hover {
     border: 2px solid transparent;
@@ -202,7 +202,7 @@ details {
 
     img:last-of-type {
       margin-left: auto;
-      transition: transform 0.3s ease-in-out;
+      transition: transform var(--transition-short) ease-in-out;
       border-radius: 50%;
     }
   }
@@ -215,7 +215,7 @@ details {
     height: 0;
     overflow: hidden;
     transition:
-      all 0.3s allow-discrete;
+      all var(--transition-med) ease-out allow-discrete;
   }
 
   &[open] {
@@ -247,7 +247,6 @@ section[name="faq"] {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.2);
-  z-index: var(--z-map);
 }
 
 .schedule {
