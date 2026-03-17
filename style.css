@@ -6,9 +6,10 @@
 }
 
 :root {
-  /* --color-primary: #a94eff; */
-  --color-primary: #333;
-  --color-background: #efefef;
+  /* --gray-primary: #a94eff; */
+  --gray-primary: #333;
+  --color-primary: #560c54;
+  --gray-background: #efefef;
   --transition-short: 0.3s;
   --transition-med: 0.5s;
   interpolate-size: allow-keywords;
@@ -16,8 +17,8 @@
 }
 
 html {
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background-color: var(--gray-background);
+  color: var(--gray-primary);
   font-family: "Sansation", sans-serif;
   font-size: 24px;
   line-height: 1.4;
@@ -90,44 +91,52 @@ main {
 }
 
 .registry {
-  padding-top: 20px;
+  /* padding-top: 20px; */
   display: flex;
   flex-direction: column;
+  padding-inline: 2rem;
+  max-width: 60ch;
+  text-align: center;
+  text-wrap: pretty;
   gap: 1rem;
+  align-items: center;
 }
 
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column; */
+  align-items: stretch;
   justify-content: center;
   text-align: center;
+  gap: 1rem;
 }
 
 a:link,
 a:visited {
   text-decoration: none;
-  color: oklch(from var(--color-primary) l c h / 0.5);
+  color: oklch(from var(--color-primary) l c h / 0.7);
   font-weight: 500;
 
   transition: all var(--transition-short);
+  border-bottom: 2px solid transparent;
 
   &:hover {
     color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
   }
 }
 
 a.btn:link,
 a.btn:visited {
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--gray-primary);
   font-weight: 500;
 
   padding: 8px 16px;
   border-radius: 0px;
 
 
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--gray-primary);
   background-color: transparent;
 
   &:hover {
@@ -176,7 +185,7 @@ details {
   padding-inline: 0.2rem;
   font-size: 0.8rem;
   width: 100%;
-  background-color: oklch(from var(--color-background) calc(l + 0.02) c h);
+  background-color: oklch(from var(--gray-background) calc(l + 0.02) c h);
 
 
   h2 {
@@ -184,7 +193,7 @@ details {
   }
 
   padding-top: 0.5rem;
-  border: 2px solid oklch(from var(--color-primary) calc(l - 0.2) c h / 0.05);
+  border: 2px solid oklch(from var(--gray-primary) calc(l - 0.2) c h / 0.05);
 
   border-radius: 4px;
 
@@ -197,7 +206,7 @@ details {
     cursor: pointer;
 
     &:hover {
-      color: oklch(from var(--color-primary) calc(l + 0.2) c h);
+      color: oklch(from var(--gray-primary) calc(l + 0.2) c h);
     }
 
     img:first-of-type {
@@ -224,7 +233,7 @@ details {
 
   &[open] {
     summary img:last-of-type {
-      transform: rotate(45deg);
+      transform: rotate(-45deg);
     }
 
     &::details-content {
@@ -264,4 +273,15 @@ section[name="faq"] {
       margin-left: 10px
     }
   }
+}
+
+.color-sample {
+  width: 100px;
+  aspect-ratio: 1/1;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+b {
+  color: oklch(from var(--color-primary) 0.3 0.1 h);
 }
